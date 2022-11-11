@@ -4,7 +4,7 @@ import * as ac from './action.creators';
 
 const initialState: Array<Product> = [];
 
-export const TaskReducer = createReducer(initialState, (builder) => {
+export const ProductReducer = createReducer(initialState, (builder) => {
     builder.addCase(ac.loadActionCreate, (_state, action) => action.payload);
     builder.addCase(ac.addActionCreate, (state, action) => [
         ...state,

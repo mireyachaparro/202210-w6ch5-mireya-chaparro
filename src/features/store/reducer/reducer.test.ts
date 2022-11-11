@@ -1,28 +1,28 @@
-import { TaskReducer } from './reducer';
+import { ProductReducer } from './reducer';
 import { actionTypes } from './action.types';
-import { Task } from '../models/product';
+import { Product } from '../models/product';
 
-describe('Given the function taskReducer', () => {
-    const taskMock: Task = {
+describe('Given the function productReducer', () => {
+    const productMock: Partial<Product> = {
         id: '1',
-        title: '',
-        responsible: '',
-        isComplete: false,
+        name: '',
+        image: '',
+        onsale: false,
     };
 
     let action: { type: string; payload: unknown };
-    let state: Array<Task>;
+    let state: Array<Product>;
 
     describe('When the action is load', () => {
         beforeEach(() => {
             action = {
                 type: actionTypes.load,
-                payload: [taskMock],
+                payload: [productMock],
             };
             state = [];
         });
         test('Then the returned state should be the action payload', () => {
-            const result = TaskReducer(state, action);
+            const result = ProductReducer(state, action);
             expect(result).toEqual(action.payload);
         });
     });
@@ -31,83 +31,55 @@ describe('Given the function taskReducer', () => {
         beforeEach(() => {
             action = {
                 type: actionTypes.add,
-                payload: taskMock,
+                payload: productMock,
             };
             state = [];
         });
         test('Then the returned state should include the action payload', () => {
-            const result = TaskReducer(state, action);
+            const result = ProductReducer(state, action);
             expect(result).toContainEqual(action.payload);
         });
     });
 
-    describe('When the action is update', () => {
-        beforeEach(() => {
-            action = {
-                type: actionTypes.update,
-                payload: { ...taskMock, title: 'Update task' },
-            };
-            state = [taskMock];
-        });
-        test('Then the returned state should include the action payload', () => {
-            const result = TaskReducer(state, action);
-            expect(result).toContainEqual(action.payload);
-        });
-    });
+    // describe('When the action is delete', () => {
+    //     beforeEach(() => {
+    //         action = {
+    //             type: actionTypes.delete,
+    //             payload: productMock,
+    //         };
+    //         state = [productMock];
+    //     });
+    //     test('Then the returned state should not include the action payload', () => {
+    //         const result = ProductReducer(state, action);
+    //         expect(result).toEqual([]);
+    //     });
+    // });
 
-    describe('When the action is update and the id is not valid', () => {
-        beforeEach(() => {
-            action = {
-                type: actionTypes.update,
-                payload: { ...taskMock, id: '2', title: 'Update task' },
-            };
-            state = [taskMock];
-        });
-        test('Then the returned state should be the original state', () => {
-            const result = TaskReducer(state, action);
-            expect(result).toEqual(state);
-        });
-    });
+    // describe('When the action is delete and the id is not valid', () => {
+    //     beforeEach(() => {
+    //         action = {
+    //             type: actionTypes.delete,
+    //             payload: { ...productMock, id: '2' },
+    //         };
+    //         state = [productMock];
+    //     });
+    //     test('Then the returned state should should be the original state', () => {
+    //         const result = ProductReducer(state, action);
+    //         expect(result).toEqual(state);
+    //     });
+    // });
 
-    describe('When the action is delete', () => {
-        beforeEach(() => {
-            action = {
-                type: actionTypes.delete,
-                payload: taskMock,
-            };
-            state = [taskMock];
-        });
-        test('Then the returned state should not include the action payload', () => {
-            const result = TaskReducer(state, action);
-            expect(result).toEqual([]);
-        });
-    });
-
-    describe('When the action is delete and the id is not valid', () => {
-        beforeEach(() => {
-            action = {
-                type: actionTypes.delete,
-                payload: { ...taskMock, id: '2' },
-            };
-            state = [taskMock];
-        });
-        test('Then the returned state should should be the original state', () => {
-            const result = TaskReducer(state, action);
-            expect(result).toEqual(state);
-        });
-    });
-
-    describe('When the action is any other', () => {
-        beforeEach(() => {
-            action = {
-                type: '',
-                payload: null,
-            };
-            state = [taskMock];
-        });
-        test('Then the returned state should be ...', () => {
-            const result = TaskReducer(state, action);
-            expect(result).toEqual(state);
-        });
-    });
+    // describe('When the action is any other', () => {
+    //     beforeEach(() => {
+    //         action = {
+    //             type: '',
+    //             payload: null,
+    //         };
+    //         state = [productMock];
+    //     });
+    //     test('Then the returned state should be ...', () => {
+    //         const result = ProductReducer(state, action);
+    //         expect(result).toEqual(state);
+    //     });
+    // });
 });
