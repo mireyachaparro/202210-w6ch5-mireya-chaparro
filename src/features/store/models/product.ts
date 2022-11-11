@@ -19,9 +19,9 @@ export type Product = {
     price: number;
 };
 
-// export class TaskModel {
-//     isComplete: boolean;
-//     constructor(public title: string, public responsible: string) {
-//         this.isComplete = false;
-//     }
-// }
+export class ProductModel {
+    onsalePrice: boolean;
+    constructor(public name: string, public image: string) {
+        this.onsalePrice = false;
+    }
+}
