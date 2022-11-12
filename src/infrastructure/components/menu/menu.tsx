@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import './menu.css';
 
 export function Menu() {
     const menuOptions = [
@@ -9,10 +8,10 @@ export function Menu() {
         { id: '2', path: 'carrito', label: 'Carrito' },
     ];
     return (
-        <nav>
-            <ul>
+        <nav className="nav">
+            <ul className="nav__list">
                 {menuOptions.map((item) => (
-                    <li key={item.id}>
+                    <li className="nav__listitem" key={item.id}>
                         <Link to={item.path}>{item.label}</Link>
                     </li>
                 ))}
