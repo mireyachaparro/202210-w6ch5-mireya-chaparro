@@ -1,19 +1,17 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
-import Home from './home.page';
+import { Gnomes } from './gnomes';
 
-describe('Given Home component', () => {
+describe('Given Header component', () => {
     describe('When we render the component', () => {
-        beforeEach(() => {
+        test('Then it should display "Learning redux"', () => {
             render(
                 <Router>
-                    <Home />
+                    <Gnomes />
                 </Router>
             );
-        });
-        test('Then it should display the title', () => {
-            const title = new RegExp(/on sale/i);
-            const element = screen.getByText(title);
+            const element = screen.getByText(/gnomes/i);
             expect(element).toBeInTheDocument();
         });
     });

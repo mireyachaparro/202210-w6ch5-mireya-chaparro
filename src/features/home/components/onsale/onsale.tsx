@@ -1,5 +1,5 @@
 export function OnSale() {
-    const title = 'ONSALE';
+    const title = 'On Sale';
     return (
         <>
             <header className="onsale">

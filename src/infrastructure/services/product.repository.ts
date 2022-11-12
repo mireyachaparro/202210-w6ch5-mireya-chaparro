@@ -44,18 +44,4 @@ export class ProductRepository implements Repository<Product> {
             if (!response.ok) throw this.createError(response);
         });
     }
-
-    // uptate / patch
-    // update(partialTask: Partial<Task>): Promise<Task> {
-    //     return fetch(`${this.url}/${partialTask.id}`, {
-    //         method: 'PATCH',
-    //         body: JSON.stringify(partialTask),
-    //         headers: {
-    //             'content-type': 'application/json',
-    //         },
-    //     }).then((response) => {
-    //         if (response.ok) return response.json();
-    //         throw this.createError(response);
-    //     });
-    // }
 }
