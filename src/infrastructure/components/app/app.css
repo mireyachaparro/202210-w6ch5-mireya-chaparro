@@ -78,3 +78,12 @@ nav a {
     flex-direction: column;
     margin: 2rem;
 }
+
+.img {
+    height: 250px;
+    width: 150px;
+}
+.profes {
+    font-size: 3rem;
+    color: red;
+}

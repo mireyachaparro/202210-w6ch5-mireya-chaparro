@@ -4,12 +4,12 @@ export function Cones() {
     const title = 'Cones';
     const { products } = useProduct();
     const result = products.filter((item) => item.section === 'Cones');
-    console.log(result);
     return (
         <>
             <header className="cones">
                 <h1 className="header__h1">{title}</h1>
             </header>
+            <p className="profes">Mañana hago los test que faltan =D</p>
             <div className="product__list">
                 {result.map((item) => (
                     <div className="product__card" key={item.id}>
