@@ -12,7 +12,7 @@ describe('Given Home component', () => {
             );
         });
         test('Then it should display the title', () => {
-            const title = new RegExp('Home', 'i');
+            const title = new RegExp(/on sale/i);
             const element = screen.getByText(title);
             expect(element).toBeInTheDocument();
         });

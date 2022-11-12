@@ -11,7 +11,7 @@ describe('Given Header component', () => {
                     <Header />
                 </Router>
             );
-            const element = screen.getByText(/Learning redux/i);
+            const element = screen.getByText(/gnomes & cones/i);
             expect(element).toBeInTheDocument();
         });
     });

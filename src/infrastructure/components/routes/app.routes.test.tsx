@@ -1,21 +1,27 @@
 import { act, render, screen } from '@testing-library/react';
-import { MemoryRouter as Router } from 'react-router-dom'; //memory router es solo para testing
+import { MemoryRouter as Router } from 'react-router-dom';
 import { AppRoutes } from './app.routes';
-import '@testing-library/jest-dom/extend-expect'; //para que funcione bien el expect con la asincronia
+import '@testing-library/jest-dom/extend-expect';
 
 jest.mock('../../../features/home/page/home.page', () => {
     return () => <div>Test Home</div>;
 });
-jest.mock('../../../features/about/page/about.page', () => {
-    return () => <div>Test About</div>;
+jest.mock('../../../features/gnomes/page/gnomes.page', () => {
+    return () => <div>Test Gnomes</div>;
+});
+jest.mock('../../../features/cones/page/cones.page', () => {
+    return () => <div>Test Cones</div>;
+});
+jest.mock('../../../features/carrito/page/carrito.page', () => {
+    return () => <div>Test Carrito</div>;
 });
 
 describe('Given AppRoutes component', () => {
     let paths: Array<string>;
     beforeEach(() => {
-        paths = ['/', '/about'];
+        paths = ['/', '/gnomes', '/cones', '/carrito'];
     });
-    describe(`When we render the component 
+    describe(`When we render the component
                 And the route is home`, () => {
         beforeEach(async () => {
             // eslint-disable-next-line testing-library/no-unnecessary-act
@@ -33,8 +39,8 @@ describe('Given AppRoutes component', () => {
             expect(element).toBeInTheDocument();
         });
     });
-    describe(`When we render the component 
-            And the route is about`, () => {
+    describe(`When we render the component
+            And the route is gnomes`, () => {
         beforeEach(async () => {
             // eslint-disable-next-line testing-library/no-unnecessary-act
             await act(async () => {
@@ -45,8 +51,44 @@ describe('Given AppRoutes component', () => {
                 );
             });
         });
-        test('Then it should display the AboutPage', async () => {
-            const title = /Test About/i;
+        test('Then it should display the GnomesPage', async () => {
+            const title = /Test Gnomes/i;
+            const element = await screen.findByText(title);
+            expect(element).toBeInTheDocument();
+        });
+    });
+    describe(`When we render the component
+            And the route is cones`, () => {
+        beforeEach(async () => {
+            // eslint-disable-next-line testing-library/no-unnecessary-act
+            await act(async () => {
+                render(
+                    <Router initialEntries={paths} initialIndex={2}>
+                        <AppRoutes />
+                    </Router>
+                );
+            });
+        });
+        test('Then it should display the ConesPage', async () => {
+            const title = /Test Cones/i;
+            const element = await screen.findByText(title);
+            expect(element).toBeInTheDocument();
+        });
+    });
+    describe(`When we render the component
+            And the route is carrito`, () => {
+        beforeEach(async () => {
+            // eslint-disable-next-line testing-library/no-unnecessary-act
+            await act(async () => {
+                render(
+                    <Router initialEntries={paths} initialIndex={3}>
+                        <AppRoutes />
+                    </Router>
+                );
+            });
+        });
+        test('Then it should display the CarritoPage', async () => {
+            const title = /Test Carrito/i;
             const element = await screen.findByText(title);
             expect(element).toBeInTheDocument();
         });

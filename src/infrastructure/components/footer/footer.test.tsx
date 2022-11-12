@@ -9,12 +9,7 @@ describe('Given Footer component', () => {
             render(<Footer />);
         });
         test('Then it should display "ISDI"', () => {
-            const element = screen.getByText(/ISDI/i);
-            expect(element).toBeInTheDocument();
-        });
-        test('Then it should display today data', () => {
-            const expectedDate = new Date().toLocaleString();
-            const element = screen.getByText(expectedDate);
+            const element = screen.getByText(/mireya/i);
             expect(element).toBeInTheDocument();
         });
     });

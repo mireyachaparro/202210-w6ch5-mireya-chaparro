@@ -6,7 +6,7 @@ export function Carrito() {
                 <h1 className="header__h1">{title}</h1>
             </header>
             <main className="main">
-                <p>aqui aparece el carrito</p>
+                <p>aqui aparece la lista de la compra</p>
             </main>
         </>
     );

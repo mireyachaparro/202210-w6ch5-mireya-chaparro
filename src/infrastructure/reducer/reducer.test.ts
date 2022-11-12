@@ -40,46 +40,4 @@ describe('Given the function productReducer', () => {
             expect(result).toContainEqual(action.payload);
         });
     });
-
-    // describe('When the action is delete', () => {
-    //     beforeEach(() => {
-    //         action = {
-    //             type: actionTypes.delete,
-    //             payload: productMock,
-    //         };
-    //         state = [productMock];
-    //     });
-    //     test('Then the returned state should not include the action payload', () => {
-    //         const result = ProductReducer(state, action);
-    //         expect(result).toEqual([]);
-    //     });
-    // });
-
-    // describe('When the action is delete and the id is not valid', () => {
-    //     beforeEach(() => {
-    //         action = {
-    //             type: actionTypes.delete,
-    //             payload: { ...productMock, id: '2' },
-    //         };
-    //         state = [productMock];
-    //     });
-    //     test('Then the returned state should should be the original state', () => {
-    //         const result = ProductReducer(state, action);
-    //         expect(result).toEqual(state);
-    //     });
-    // });
-
-    // describe('When the action is any other', () => {
-    //     beforeEach(() => {
-    //         action = {
-    //             type: '',
-    //             payload: null,
-    //         };
-    //         state = [productMock];
-    //     });
-    //     test('Then the returned state should be ...', () => {
-    //         const result = ProductReducer(state, action);
-    //         expect(result).toEqual(state);
-    //     });
-    // });
 });
