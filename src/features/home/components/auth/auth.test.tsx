@@ -15,7 +15,7 @@ describe('Given Auth component', () => {
                     <Auth />
                 </Router>
             );
-            const title = new RegExp('Auth', 'i');
+            const title = new RegExp(/auth/i);
             const element = screen.getByText(title);
             expect(element).toBeInTheDocument();
         });
