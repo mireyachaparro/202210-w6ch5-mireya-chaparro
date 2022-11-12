@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkweek4_todo=self.webpackChunkweek4_todo||[]).push([[199],{199:function(e,n,t){t.r(n);var u=t(184);n.default=function(){return(0,u.jsx)("main",{children:(0,u.jsx)("h2",{children:"About page"})})}}}]);
+//# sourceMappingURL=199.8c1966d3.chunk.js.map

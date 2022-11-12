@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkweek4_todo=self.webpackChunkweek4_todo||[]).push([[859],{859:function(e,n,r){r.r(n),r.d(n,{default:function(){return t}});var s=r(184);function c(){return(0,s.jsx)("header",{className:"onsale",children:(0,s.jsx)("h1",{children:"ONSALE"})})}var t=function(){return(0,s.jsxs)("main",{children:[(0,s.jsx)("h2",{children:"Home page"}),(0,s.jsx)(c,{})]})}}}]);
+//# sourceMappingURL=859.bc240f16.chunk.js.map

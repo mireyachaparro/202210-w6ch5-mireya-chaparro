@@ -1,12 +1,12 @@
-export function OnSale() {
-    const title = 'ONSALE';
+export function Carrito() {
+    const title = 'Carrito';
     return (
         <>
-            <header className="onsale">
+            <header className="carrito">
                 <h1 className="header__h1">{title}</h1>
             </header>
             <main>
-                <p>aqui aparece la lista de onsale</p>
+                <p>aqui aparece el carrito</p>
             </main>
         </>
     );
