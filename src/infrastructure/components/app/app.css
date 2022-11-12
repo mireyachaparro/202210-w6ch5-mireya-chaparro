@@ -57,3 +57,24 @@ nav a {
     margin: 0;
     padding: 0;
 }
+
+.onsale__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.onsale__card {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+.product__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.product__card {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}

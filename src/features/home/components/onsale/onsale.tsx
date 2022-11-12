@@ -9,10 +9,16 @@ export function OnSale() {
             <header className="onsale">
                 <h1 className="header__h1">{title}</h1>
             </header>
-
-            {result.map((item) => (
-                <p key={item.id}>{item.name}</p>
-            ))}
+            <div className="onsale__list">
+                {result.map((item) => (
+                    <div className="onsale__card" key={item.id}>
+                        <div className="onsale__card img">
+                            <img src={item.image} alt="Imagen" width="150px" />
+                        </div>
+                        <div className="onsale__card name">{item.name}</div>
+                    </div>
+                ))}
+            </div>
         </>
     );
 }
