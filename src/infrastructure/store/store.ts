@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { ProductReducer } from '../../features/store/reducer/reducer';
+import { ProductReducer } from '../reducer/reducer';
 
 export const appStore = configureStore({
     reducer: {
-        tasks: ProductReducer, //esta es la rama
+        products: ProductReducer,
     },
 });
 
-export type rootStore = typeof appStore; //esto se pone siempre asi
+export type rootStore = typeof appStore;
 
-export type rootState = ReturnType<typeof appStore.getState>; //esto se pone siempre asi
+export type rootState = ReturnType<typeof appStore.getState>;
