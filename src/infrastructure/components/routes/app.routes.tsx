@@ -2,14 +2,20 @@ import React, { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 const Home = lazy(() => import('../../../features/home/page/home.page'));
-const About = lazy(() => import('../../../features/about/page/about.page'));
+const Gnomes = lazy(() => import('../../../features/gnomes/page/gnomes.page'));
+const Cones = lazy(() => import('../../../features/cones/page/cones.page'));
+const Carrito = lazy(
+    () => import('../../../features/carrito/page/carrito.page')
+);
 
 export function AppRoutes() {
     return (
         <Suspense>
             <Routes>
                 <Route path="home" element={<Home></Home>}></Route>
-                <Route path="about" element={<About></About>}></Route>
+                <Route path="gnomes" element={<Gnomes></Gnomes>}></Route>
+                <Route path="cones" element={<Cones></Cones>}></Route>
+                <Route path="carrito" element={<Carrito></Carrito>}></Route>
                 <Route path="" element={<Home></Home>}></Route>
                 <Route path="*" element={<Navigate replace to="" />}></Route>
             </Routes>

@@ -4,7 +4,9 @@ import './menu.css';
 export function Menu() {
     const menuOptions = [
         { id: '1', path: '', label: 'Home' },
-        { id: '2', path: 'about', label: 'About' },
+        { id: '2', path: 'gnomes', label: 'Gnomes' },
+        { id: '2', path: 'cones', label: 'Cones' },
+        { id: '2', path: 'carrito', label: 'Carrito' },
     ];
     return (
         <nav>
