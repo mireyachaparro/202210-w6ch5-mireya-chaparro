@@ -3,4 +3,3 @@ export const consoleDebug = (info: unknown) => {
         console.log(info);
     }
 };
-//solo en produccion quiero que muestres por consola las cosas cuando llamo a console.debug
