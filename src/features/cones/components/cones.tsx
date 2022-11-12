@@ -5,7 +5,7 @@ export function Cones() {
             <header className="cones">
                 <h1 className="header__h1">{title}</h1>
             </header>
-            <main>
+            <main className="main">
                 <p>aqui aparece la lista de conos</p>
             </main>
         </>
