@@ -16,6 +16,10 @@ jest.mock('../../../features/carrito/page/carrito.page', () => {
     return () => <div>Test Carrito</div>;
 });
 
+jest.mock('../../../features/details/page/details.page', () => {
+    return () => <div>Test details</div>;
+});
+
 describe('Given AppRoutes component', () => {
     let paths: Array<string>;
     beforeEach(() => {
