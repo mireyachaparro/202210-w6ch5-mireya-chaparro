@@ -2,12 +2,16 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
 import { Cones } from './cones';
-describe('Given Header component', () => {
+import { Provider } from 'react-redux';
+import { appStore } from '../../../infrastructure/store/store';
+describe('Given Cones component', () => {
     describe('When we render the component', () => {
-        test('Then it should display "Learning redux"', () => {
+        test('Then it should display the title "cones"', () => {
             render(
                 <Router>
-                    <Cones />
+                    <Provider store={appStore}>
+                        <Cones />
+                    </Provider>
                 </Router>
             );
             const element = screen.getByText(/cones/i);

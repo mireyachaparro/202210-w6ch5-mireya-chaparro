@@ -1,13 +1,20 @@
+import { useParams } from 'react-router-dom';
 import { Product } from '../models/product';
 import { Repository } from './repository';
 
 export class ProductRepository implements Repository<Product> {
     url: string;
+    urlDetails: string;
+    id = useParams();
     constructor(url = '') {
         // this.url = url ? url : (process.env.REDUX_APP_URL_PRODUCTS as string);
+
         this.url = url
             ? url
             : 'https://gnomes-conesserver-production.up.railway.app/data';
+        this.urlDetails = url
+            ? url
+            : `https://gnomes-conesserver-production.up.railway.app/data/${this.id}`;
     }
 
     createError(response: Response) {
