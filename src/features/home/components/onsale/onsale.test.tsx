@@ -18,5 +18,18 @@ describe('Given OnSale component', () => {
             const element = screen.getByText(/on sale/i);
             expect(element).toBeInTheDocument();
         });
+        // test('then it should display an item with propierty onsale', () => {
+        //     const mockProduct = {
+        //         id: '1',
+        //         section: '',
+        //         name: 'pepito',
+        //         description: [''],
+        //         image: '',
+        //         onsale: true,
+        //         onsalePrice: 12,
+        //         price: 11,
+        //     };
+        //     expect(mockProduct).toBeInTheDocument();
+        // });
     });
 });
