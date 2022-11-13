@@ -16,6 +16,7 @@ export function Gnomes() {
                             <img src={item.image} alt="Imagen" width="150px" />
                         </div>
                         <div className="product__card name">{item.name}</div>
+                        <div className="product__card price">{item.price}</div>
                     </div>
                 ))}
             </div>

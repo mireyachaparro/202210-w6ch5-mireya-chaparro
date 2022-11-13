@@ -16,6 +16,12 @@ export function OnSale() {
                             <img src={item.image} alt="Imagen" />
                         </div>
                         <div className="onsale__card name">{item.name}</div>
+                        <div className="product__card price">
+                            Antes: {item.price}
+                        </div>
+                        <div className="product__card priceonsale">
+                            Ahora: {item.onsalePrice}
+                        </div>
                     </div>
                 ))}
             </div>
