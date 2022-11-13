@@ -1,8 +1,11 @@
+// import { useParams } from 'react-router-dom';
+// import { useProduct } from '../../../infrastructure/hooks/custom.hooks';
+
 export function Details() {
     const title = 'Details';
     // const { products } = useProduct();
     // const { id } = useParams();
-    // const getProductById = async (id: string | undefined) => {
+
     //     const data = await fetch(
     //         `https://gnomes-conesserver-production.up.railway.app/data/${id}`
     //     );
