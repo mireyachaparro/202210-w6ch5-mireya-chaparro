@@ -9,7 +9,6 @@ export function OnSale() {
             <header className="onsale">
                 <h1 className="header__h1">{title}</h1>
             </header>
-            <p className="profes">Mañana hago los test que faltan =D</p>
             <div className="onsale__list">
                 {result.map((item) => (
                     <div className="onsale__card" key={item.id}>
