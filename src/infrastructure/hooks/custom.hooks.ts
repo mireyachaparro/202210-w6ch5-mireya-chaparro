@@ -19,10 +19,10 @@ export const useProduct = () => {
     }, [apiProduct, dispatcher]);
 
     //add to carrito
-    const handleAdd = (newTask: CarritoProduct) => {
+    const handleAdd = (newProductCarrito: CarritoProduct) => {
         apiProduct
-            .create(newTask)
-            .then((task: Product) => dispatcher(ac.addActionCreate(task)))
+            .create(newProductCarrito)
+            .then((product: Product) => dispatcher(ac.addActionCreate(product)))
             .catch((error: Error) => console.log(error.name, error.message));
     };
 
